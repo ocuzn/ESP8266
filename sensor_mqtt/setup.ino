@@ -29,7 +29,7 @@ void setup() {
   WiFi.begin(ssid, password);
 
   // Set OTA parameters (optional)
-  ArduinoOTA.setHostname("ESP8266-OTA");
+  ArduinoOTA.setHostname(OTA_HOSTNAME);
   // ArduinoOTA.setPassword("yourpassword"); // (optional)
 
   setup_ota();
