@@ -1,28 +1,3 @@
-
-// Connect to WiFi
-void setup_wifi() {
-  delay(10);
-  Serial.println();
-  
-  WiFiManager wifiManager;
-
-  // Uncomment to erase saved Wi-Fi credentials (for debugging/testing)
-  // wifiManager.resetSettings();
-
-  // Auto connect will try saved credentials, or start AP if none/fail
-  // "ESP_Config" is the AP SSID (name of captive portal)
-  if (!wifiManager.autoConnect("ESP_Config", "secreto iberico")) {
-    Serial.println("Failed to connect and timeout reached");
-    ESP.restart();
-    delay(1000);
-  }
-
-  Serial.println("Connected to WiFi!");
-  Serial.print("IP address: ");
-  Serial.println(WiFi.localIP());
-  Serial.println("\nWiFi connected");
-}
-
 void setup_ota() {
   // OTA event handlers
   ArduinoOTA.onStart([]() {
@@ -51,17 +26,14 @@ void setup_ota() {
 void setup() {
   Serial.begin(115200);
   Serial.println("Booting...");
-  setup_wifi();
+  WiFi.begin(ssid, password);
 
   // Set OTA parameters (optional)
   ArduinoOTA.setHostname("ESP8266-OTA");
-  // ArduinoOTA.setPassword("yourpassword"); // Optional password
+  // ArduinoOTA.setPassword("yourpassword"); // (optional)
 
   setup_ota();
-
-  // Start Sensors
   dht.begin();
-
-  client.setServer(mqtt_server, 1883);
+  client.setServer(mqtt_server, mqtt_port);
 
 }

@@ -1,7 +1,7 @@
 void reconnect() {
   while (!client.connected()) {
     Serial.print("Attempting MQTT connection...");
-    if (client.connect(deviceID)) {
+    if (client.connect(device_id)) {
       Serial.println("connected");
     } else {
       Serial.print("failed, rc=");
