@@ -1,0 +1,90 @@
+
+
+---
+On
+
+Protocol: NEC
+Hex Code: 0xFFA25D
+Decimal: 16753245
+Binary: 0b111111111010001001011101
+Bits: 32
+Address: 0x0
+Command: 0x45
+
+---
+White hue, lowest brightness
+
+Protocol: NEC
+Hex Code: 0xFF629D
+Decimal: 16736925
+Binary: 0b111111110110001010011101
+Bits: 32
+Address: 0x0
+Command: 0x46
+
+---
+OFF
+
+Protocol: NEC
+Hex Code: 0xFFE21D
+Decimal: 16769565
+Binary: 0b111111111110001000011101
+Bits: 32
+Address: 0x0
+Command: 0x47
+
+---
+RED Hue
+
+Protocol: NEC
+Hex Code: 0xFF6897
+Decimal: 16738455
+Binary: 0b111111110110100010010111
+Bits: 32
+Address: 0x0
+Command: 0x16
+
+---
+Orange Hue
+
+Protocol: NEC
+Hex Code: 0xFF30CF
+Decimal: 16724175
+Binary: 0b111111110011000011001111
+Bits: 32
+Address: 0x0
+Command: 0xC
+
+---
+White hue, Max brightness
+
+Protocol: NEC
+Hex Code: 0xFF52AD
+Decimal: 16732845
+Binary: 0b111111110101001010101101
+Bits: 32
+Address: 0x0
+Command: 0x4A
+
+---
+Increase brightness
+
+Protocol: NEC
+Hex Code: 0xFFA857
+Decimal: 16754775
+Binary: 0b111111111010100001010111
+Bits: 32
+Address: 0x0
+Command: 0x15
+
+---
+Decrease brightness
+
+Protocol: NEC
+Hex Code: 0xFF906F
+Decimal: 16748655
+Binary: 0b111111111001000001101111
+Bits: 32
+Address: 0x0
+Command: 0x9
+
